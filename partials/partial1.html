@@ -1,0 +1,14 @@
+<ul>
+<li ng-repeat="techtalk in techtalks" ng-if="techtalk.title">
+<p><strong>{{techtalk.title}}</strong></p>
+<ul>
+    <li ng-repeat="lector in techtalk.lector">
+        <dl>
+            <dt>{{lector}}</dt>
+                <dd>Full name: {{lectorsData[lector].full_name}}</dd>
+                <dd>Email addresses: <ul><li ng-repeat="email in lectorsData[lector].email">{{email}}</li></ul>
+        </dl>
+    </li>
+</ul>
+</li>
+</ul>
